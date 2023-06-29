@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momo Site</title>
+    <link rel="stylesheet" href="momosite.css">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .logo img {
+        height: 50%;
+        width: 75;
+        margin-left: 60px;
+        margin-right: -125px;
+        margin-top: 10px;
+        opacity: 0.89;
+    }
+
+    #navbar {
+        display: flex;
+        margin: 0;
+        position: sticky;
+        font-family: 'ZCOOL KuaiLe', cursive;
+        height: 145px;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    #navbar ul {
+        display: flex;
+        margin-top: 41px;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        margin: 12px px;
+    }
+
+    #navbar ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 3px 19px;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+    #login a {
+        margin-left: 200px;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 200px;
+    }
+
+    .formaction {
+        display: block;
+        color: rgb(0, 0, 0);
+        flex-direction: column;
+        position: relative;
+        /* background-color: black; */
+        height: 400px;
+        width: 25%;
+        margin: 10px 30px;
+        padding: 12px 12px;
+        font-weight: bolder;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        /* background: url('https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80'); */
+        height: 100%;
+        background-image: url('https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        top: 0px;
+        z-index: -1;
+        opacity: 0.90;
+
+    }
+
+    .formaction input, textarea {
+        border-radius: 5px;
+        background: none;
+        outline: none;
+        border-right: 0.9px solid rgb(150, 149, 149);
+        border-bottom: 0.9px solid rgb(150, 149, 149);
+        border-left: 0.3px solid rgb(241, 241, 241);
+        border-top: 0.3px solid rgb(231, 231, 231);
+        margin-top: 8px;
+    }
+
+    #date {
+        width: 40%;
+    }
+
+    #time {
+        width: 30%;
+    }
+
+    #people {
+        width: 100%;
+    }
+
+    #name {
+        width: 100%;
+    }
+
+    #email {
+        width: 30%;
+    }
+
+    #phone {
+        width: 30%;
+    }
+
+    .formele {
+        margin-bottom: 12px;
+    }
+
+    .formaction h1 {
+        text-align: center;
+        font-family: 'ZCOOL KuaiLe', cursive;
+    }
+
+    .tableline {
+        background-color: black;
+        border: 1px solid black;
+    }
+
+    #bat {
+        margin-bottom: 5px;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="momo_site_logo.png" alt="error">
+        </div>
+        <ul>
+            <li class="navele"><a href="#">HOME</a></li>
+            <li class="navele"><a href="#">STORES</a></li>
+            <li class="navele"><a href="#">GIFT CARDS</a></li>
+            <li class="navele"><a href="#">ENQUIRY</a></li>
+            <li class="navele"><a href="#">CONTACT US</a></li>
+            <LI id="login"><a href="#">LOGIN</a></LI>
+            <li id="signup"><a href="#">SIGN UP</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <form action="backend.php" class="booking">
+    </section>
+    <div class="formaction">
+        <h1 id="bat">Book a Table</h1>
+        <hr class="tableline">
+        Date* <input type="date" placeholder="" id="date" class="formele">
+        Time* <input type="time" name="" id="time" class="formele">
+        People* <input type="number" name="" id="people" class="formele">
+        Name* <input type="text" id="name" class="formele">
+        Email* <input type="email" name="" id="email" class="formele">
+        Phone* <input type="text" name="" id="phone" class="formele">
+        Comment <textarea type="text" name="" id="comment" cols="51" rows="10" class="formele"></textarea>
+    </div>
+    </form>
+
+</body>
+
+</html>
